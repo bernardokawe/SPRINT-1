@@ -1,0 +1,423 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* =============================== */
+
+/* --- HEADER  --- */
+.header-container {
+    background-color: #eace47;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Logo */
+.logo-text {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: #1a1a1a;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 65px;
+    border-radius: 50px; /* Formato de pílula exato */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f1d34d;
+}
+
+/* Ícones navbar */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.user-icon {
+    color: #ffffff; 
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: #ffffff; /* Branco*/
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* ==================================== */
+
+/* --- SEÇÃO HERO --- */
+.hero {
+    background-color: #eace47;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content h1 {
+     
+    font-size: clamp(50px, 8vw, 100px);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: #ffffff;
+    max-width: 450px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-content p strong{
+    color: black;
+}
+
+.btn-saiba-mais {
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ================================== */
+
+/* Seção sobre */
+.about {
+    background-color: black;
+    color: white;
+    padding: 100px 10%;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+   
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    text-transform: uppercase;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-bg {
+    
+    width: 400px;
+    height: 400px;
+    background-color: #0b2e59; /* Azul do fundo do Batman */
+    border-radius: 50%;
+    z-index: 1;
+    right: -50px;
+}
+
+.about-image img {
+    position: relative;
+    z-index: 2;
+    height: 500px; /* Ajuste conforme sua imagem */
+    object-fit: contain;
+}
+
+/* Estilo das Seções */
+.news-section {
+    background-color: #9e1a1a; /* Vermelho escuro da imagem */
+}
+
+.catalog-section {
+    background-color: #eace47; /* Amarelo */
+}
+
+.section-title {
+    
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+/* ===================================== */
+
+/* Seção novidades */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); 
+}
+
+/* Cards de Novidades */
+.news-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-card img {
+    width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 0px black;
+}
+
+.news-card h5 {
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.btn-hq {
+    background-color: #ffff00;
+    color: black;
+    border: none;
+    padding: 8px 20px;
+    font-weight: 900;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px black;
+}
+
+/* =========================================== */
+
+/* Seção do catálogo */
+
+/* Filtros */
+.btn-filter {
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-filter.active {
+    outline: 3px solid #212529;
+    outline-offset: 2px;
+}
+
+/* Cards do Catálogo */
+.catalog-card {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.card-img-placeholder {
+    background-color: #212529;
+    aspect-ratio: 2/3;
+    width: 100%;
+}
+
+.catalog-card .desc {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.icons-catalog i{
+    color: black;
+}
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .custom-navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 60px 8%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content p {
+        margin: 0 auto 25px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-text p {
+        margin: 0 auto;
+    }
+
+    .circle-bg {
+        width: 300px;
+        height: 300px;
+        right: 0;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+}
+
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .custom-navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-icons {
+        justify-content: center;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(35px, 10vw, 60px);
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    /* About */
+    .about {
+        padding: 60px 5%;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .circle-bg {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Seções */
+    .section-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* Cards */
+    .news-card h5 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .btn-hq {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .btn-saiba-mais {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+}
