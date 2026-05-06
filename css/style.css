@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+
+/* Fontes baixadas */
+
+/* Fonte 1 (Moliga) */
+@font-face {
+    font-family: 'Moliga';
+    src: url('/assets/fonts/Moliga\ DEMO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Fonte 2 (The simple Life) */
+@font-face {
+    font-family: 'Simple';
+    src: url('/assets/fonts/The\ Simple\ Life.otf') format('opentype');
+}
+
+
+.body{
+    font-family: 'Moliga';
+}
+
 /* =============================== */
 
 /* --- HEADER  --- */
@@ -14,11 +37,20 @@
 }
 
 /* Logo */
-.logo-text {
-    color: white;
-    font-weight: 900;
-    font-size: 20px;
+
+.logo {
+    display: flex;
+    align-items: center;
 }
+
+
+
+.logo img {
+    height: 40px; /* controla o tamanho */
+    width: auto;
+    display: block;
+}
+
 
 /* Navbar */
 .custom-navbar {
@@ -27,7 +59,7 @@
     max-width: 1200px;
     margin: 0 auto;
     height: 65px;
-    border-radius: 50px; /* Formato de pílula exato */
+    border-radius: 50px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,11 +73,15 @@
 }
 
 .nav-links a {
-    color: white;
+    color: #FFF;
+    text-align: center;
+    font-family: "Moliga";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     text-decoration: none;
-    font-weight: 900;
-    font-size: 14px;
-    transition: 0.3s;
+
 }
 
 .nav-links a:hover {
@@ -88,16 +124,22 @@
     font-size: clamp(50px, 8vw, 100px);
     color: white;
     margin-bottom: 15px;
+    font-family: 'Moliga';
 }
 
 .hero-content p {
-    color: #ffffff;
-    max-width: 450px;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 1.2;
-    margin-bottom: 25px;
+    /* Caixa */
+    width: 774px;
+    height: 59px;
+    
+    
+    /* Letras */
+    color: #FFF;
+    font-family: "Moliga";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .hero-content p strong{
@@ -105,14 +147,21 @@
 }
 
 .btn-saiba-mais {
+    
+    /* Botão */
     background-color: black;
-    color: #ffffff;
+    border-radius: 20px;
     border: none;
-    padding: 12px 35px;
-    border-radius: 25px;
-    font-weight: 900;
+    width: 302px;
+    height: 50px;
+    
+    
+    /* Letras */
+    color: #eace47;
+    font-weight: 400;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 36px;
+    font-family: 'Moliga';
 }
 
 /* ================================== */
@@ -135,17 +184,35 @@
     flex: 1;
 }
 
+/* Titulo seção sobre */
 .about-text h2 {
-    font-size: 50px;
-    margin-bottom: 30px;
+
+    width: 332px;
+    height: 92px;
+
+   color: #FFF;
+    font-family: "Moliga";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
    
 }
 
 .about-text p {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 500px;
-    text-transform: uppercase;
+    
+    /* Caixa */
+    width: 903px;
+    height: 396px;
+    
+    
+    /* Letras */
+    color: #FFF;
+    font-family: "Moliga";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .about-image {
@@ -159,7 +226,7 @@
     
     width: 400px;
     height: 400px;
-    background-color: #0b2e59; /* Azul do fundo do Batman */
+    background-color: #0b2e59; 
     border-radius: 50%;
     z-index: 1;
     right: -50px;
@@ -173,17 +240,20 @@
 }
 
 /* Estilo das Seções */
+
+/* Seção novidades */
 .news-section {
-    background-color: #9e1a1a; /* Vermelho escuro da imagem */
+    background-color: #9e1a1a;
 }
 
+/* Seção catálogo */
 .catalog-section {
-    background-color: #eace47; /* Amarelo */
+    background-color: #eace47; 
 }
 
 .section-title {
-    
-    font-size: 45px;
+    font-family: 'Moliga';
+    font-size: 70px;
     letter-spacing: 2px;
 }
 
@@ -198,6 +268,7 @@
 
 /* Cards de Novidades */
 .news-card {
+    font-family: 'Moliga';
     background: white;
     padding: 20px;
     border-radius: 5px;
@@ -214,35 +285,71 @@
 }
 
 .news-card h5 {
-    font-weight: 900;
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: black;
+    color: #000;
+    font-family: "Moliga";
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .btn-hq {
     background-color: #ffff00;
-    color: black;
-    border: none;
-    padding: 8px 20px;
-    font-weight: 900;
-    border-radius: 20px;
-    box-shadow: 2px 2px 0px black;
+    border-radius: 30px;
+    width: 250px;
+    height: 84px;
+    
+    
+    color: #000;
+    font-family: "Moliga";
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 /* =========================================== */
 
 /* Seção do catálogo */
 
+.titulo-cat{
+    color: #211C1F;
+    font-family: "Moliga";
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;    
+    
+}
+
+.subtitle{
+    width: 1132px;
+    color: #211C1F;
+    text-align: center;
+    font-family: "Simple";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 /* Filtros */
 .btn-filter {
-    background-color: #212529;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
+    
+    /* layout */
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background: #211C1F;
+
+    /* Letras */
+    color: #FFF;
+    text-align: center;
+    font-family: "Moliga";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .btn-filter.active {
@@ -252,9 +359,12 @@
 
 /* Cards do Catálogo */
 .catalog-card {
+
+    /* Layout */
     background: white;
     padding: 10px;
     border-radius: 4px;
+    font-family: 'Moliga';
 }
 
 .card-img-placeholder {
@@ -264,8 +374,13 @@
 }
 
 .catalog-card .desc {
-    font-size: 12px;
-    font-weight: 900;
+    color: #000;
+    text-align: center;
+    font-family: "Moliga";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
 }
 
 .icons-catalog i{
@@ -275,7 +390,7 @@
 
 /* ================= RESPONSIVIDADE ================= */
 
-/* Tablets */
+/* ===== TABLETS ===== */
 @media (max-width: 1024px) {
 
     .custom-navbar {
@@ -286,25 +401,36 @@
         gap: 20px;
     }
 
+    /* HERO */
     .hero {
         height: auto;
         padding: 60px 8%;
         text-align: center;
         justify-content: center;
+        flex-direction: column;
     }
 
     .hero-content p {
+        max-width: 100%;
         margin: 0 auto 25px;
+        font-size: 22px;
     }
 
+    /* ABOUT */
     .about-container {
         flex-direction: column;
         text-align: center;
         gap: 40px;
     }
 
+    .about-text h2 {
+        font-size: clamp(40px, 6vw, 70px);
+        width: 100%;
+    }
+
     .about-text p {
-        margin: 0 auto;
+        max-width: 100%;
+        font-size: 22px;
     }
 
     .circle-bg {
@@ -316,13 +442,40 @@
     .about-image img {
         height: 400px;
     }
+
+    /* TÍTULOS */
+    .section-title {
+        font-size: clamp(32px, 5vw, 60px);
+        text-align: center;
+    }
+
+    /* SUBTITLE */
+    .subtitle {
+        max-width: 100%;
+        font-size: 22px;
+    }
+
+    /* BOTÕES */
+    .btn-hq,
+    .btn-saiba-mais {
+        width: auto;
+        max-width: 250px;
+        height: auto;
+        font-size: 20px;
+        padding: 12px 20px;
+    }
 }
 
 
-/* Celulares */
+/* ===== CELULARES ===== */
 @media (max-width: 768px) {
 
-    /* Navbar */
+    /* LOGO */
+    .logo img {
+        height: 30px;
+    }
+
+    /* NAVBAR */
     .custom-navbar {
         flex-direction: column;
         height: auto;
@@ -333,15 +486,19 @@
 
     .nav-links {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 20px;
     }
 
     .nav-icons {
         justify-content: center;
     }
 
-    /* Hero */
+    /* HERO */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -349,75 +506,102 @@
     }
 
     .hero-content h1 {
-        font-size: clamp(35px, 10vw, 60px);
+        font-size: clamp(30px, 10vw, 50px);
     }
 
     .hero-content p {
-        font-size: 14px;
+        width: 100%;
+        font-size: 18px;
     }
 
-    /* About */
+    /* ABOUT */
     .about {
         padding: 60px 5%;
     }
 
     .about-text h2 {
-        font-size: 32px;
+        font-size: clamp(28px, 8vw, 50px);
     }
 
     .about-text p {
-        font-size: 14px;
+        width: 100%;
+        font-size: 18px;
     }
 
     .about-image img {
-        height: 300px;
+        height: 280px;
     }
 
     .circle-bg {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
 
-    /* Seções */
+    /* TÍTULOS */
     .section-title {
-        font-size: 28px;
+        font-size: 26px;
         text-align: center;
     }
 
-    /* Cards */
+    /* SUBTITLE */
+    .subtitle {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* CARDS */
     .news-card h5 {
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
     }
 
+    /* BOTÕES */
     .btn-hq {
-        font-size: 12px;
-        padding: 6px 15px;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .btn-saiba-mais {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        font-size: 18px;
     }
 }
 
 
-/* Celulares pequenos */
+/* ===== CELULARES PEQUENOS ===== */
 @media (max-width: 480px) {
 
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .hero-content p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .btn-saiba-mais {
-        padding: 10px 20px;
-        font-size: 12px;
+        font-size: 16px;
+        padding: 8px 16px;
     }
 
     .about-text h2 {
         font-size: 24px;
     }
 
+    .about-text p {
+        font-size: 14px;
+    }
+
     .section-title {
         font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 14px;
     }
 }
