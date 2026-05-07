@@ -20,6 +20,8 @@
 @font-face {
     font-family: 'Simple';
     src: url('/assets/fonts/The\ Simple\ Life.otf') format('opentype');
+     font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -46,7 +48,7 @@
 
 
 .logo img {
-    height: 40px; /* controla o tamanho */
+    height: 40px; 
     width: auto;
     display: block;
 }
@@ -102,7 +104,7 @@
 }
 
 .cart-icon {
-    color: #ffffff; /* Branco*/
+    color: #ffffff; 
     font-size: 20px;
     cursor: pointer;
 }
@@ -128,6 +130,7 @@
 }
 
 .hero-content p {
+    
     /* Caixa */
     width: 774px;
     height: 59px;
@@ -138,12 +141,28 @@
     font-family: "Moliga";
     font-size: 30px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
 }
 
 .hero-content p strong{
     color: black;
+}
+
+/* Imagem do lado */
+
+.hero-image {
+    margin-top: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 .btn-saiba-mais {
@@ -162,6 +181,12 @@
     cursor: pointer;
     font-size: 36px;
     font-family: 'Moliga';
+}
+
+
+
+.btn-saiba-mais:hover{
+    color: #FFF;
 }
 
 /* ================================== */
@@ -215,35 +240,23 @@
     line-height: normal;
 }
 
-.about-image {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
+.about-img img {
+    width: 100%;
+    max-width: 300px;
 
-.circle-bg {
-    
-    width: 400px;
-    height: 400px;
-    background-color: #0b2e59; 
-    border-radius: 50%;
-    z-index: 1;
-    right: -50px;
-}
-
-.about-image img {
     position: relative;
     z-index: 2;
-    height: 500px; /* Ajuste conforme sua imagem */
-    object-fit: contain;
+    
 }
+
+
+
 
 /* Estilo das Seções */
 
 /* Seção novidades */
 .news-section {
-    background-color: #9e1a1a;
+    background-color: #a71a22;
 }
 
 /* Seção catálogo */
@@ -371,6 +384,14 @@
     background-color: #212529;
     aspect-ratio: 2/3;
     width: 100%;
+    overflow: hidden;
+}
+
+.card-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .catalog-card .desc {
@@ -390,6 +411,7 @@
 
 /* ================= RESPONSIVIDADE ================= */
 
+
 /* ===== TABLETS ===== */
 @media (max-width: 1024px) {
 
@@ -405,9 +427,17 @@
     .hero {
         height: auto;
         padding: 60px 8%;
-        text-align: center;
-        justify-content: center;
+
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 7vw, 70px);
     }
 
     .hero-content p {
@@ -416,9 +446,19 @@
         font-size: 22px;
     }
 
+    .hero-image img {
+        max-width: 260px;
+    }
+
     /* ABOUT */
+    .about {
+        padding: 80px 8%;
+    }
+
     .about-container {
+        display: flex;
         flex-direction: column;
+
         text-align: center;
         gap: 40px;
     }
@@ -433,17 +473,38 @@
         font-size: 22px;
     }
 
+    .about-img {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+
+        position: relative;
+        z-index: 2;
+    }
+
     .circle-bg {
-        width: 300px;
-        height: 300px;
-        right: 0;
+        width: 320px;
+        height: 320px;
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-45%, -50%);
+
+        z-index: 1;
     }
 
-    .about-image img {
-        height: 400px;
-    }
-
-    /* TÍTULOS */
+    /* TITULOS */
     .section-title {
         font-size: clamp(32px, 5vw, 60px);
         text-align: center;
@@ -461,10 +522,12 @@
         width: auto;
         max-width: 250px;
         height: auto;
+
         font-size: 20px;
         padding: 12px 20px;
     }
 }
+
 
 
 /* ===== CELULARES ===== */
@@ -479,14 +542,17 @@
     .custom-navbar {
         flex-direction: column;
         height: auto;
+
         padding: 20px;
         gap: 15px;
+
         border-radius: 20px;
     }
 
     .nav-links {
         flex-direction: column;
         gap: 12px;
+
         align-items: center;
     }
 
@@ -500,8 +566,12 @@
 
     /* HERO */
     .hero {
+        display: flex;
         flex-direction: column;
+
         text-align: center;
+        gap: 35px;
+
         padding: 50px 5%;
     }
 
@@ -514,9 +584,21 @@
         font-size: 18px;
     }
 
+    .hero-image img {
+        max-width: 220px;
+    }
+
     /* ABOUT */
     .about {
         padding: 60px 5%;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        gap: 40px;
     }
 
     .about-text h2 {
@@ -528,16 +610,38 @@
         font-size: 18px;
     }
 
-    .about-image img {
-        height: 280px;
+    .about-img {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+
+        position: relative;
+        z-index: 2;
     }
 
     .circle-bg {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-45%, -50%);
+
+        z-index: 1;
     }
 
-    /* TÍTULOS */
+    /* TITULOS */
     .section-title {
         font-size: 26px;
         text-align: center;
@@ -559,18 +663,22 @@
     .btn-hq {
         width: 100%;
         max-width: 200px;
+
         height: auto;
         font-size: 18px;
+
         padding: 10px;
     }
 
     .btn-saiba-mais {
         width: 100%;
         max-width: 220px;
+
         height: auto;
         font-size: 18px;
     }
 }
+
 
 
 /* ===== CELULARES PEQUENOS ===== */
@@ -584,6 +692,10 @@
         font-size: 14px;
     }
 
+    .hero-image img {
+        max-width: 180px;
+    }
+
     .btn-saiba-mais {
         font-size: 16px;
         padding: 8px 16px;
@@ -595,6 +707,25 @@
 
     .about-text p {
         font-size: 14px;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .circle-bg {
+        width: 200px;
+        height: 200px;
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-45%, -50%);
+
+        z-index: 1;
     }
 
     .section-title {
