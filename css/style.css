@@ -25,9 +25,13 @@
 }
 
 
-.body{
-    font-family: 'Moliga';
-    height: 100vh;
+body {
+    font-family: 'Moliga', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
 }
 
 /* =============================== */
@@ -73,15 +77,16 @@
     display: flex;
     list-style: none;
     gap: 35px;
-    margin-top: 20px;
-    margin-left: -35px;
+    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     color: #FFF;
     text-align: center;
     font-family: "Moliga";
-    font-size: 30px;
+    font-size: clamp(18px, 2vw, 30px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -118,36 +123,38 @@
 /* --- SEÇÃO HERO --- */
 .hero {
     background-color: #eace47;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    justify-content: center;
+    padding: 60px 10%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.hero-content {
+    flex: 1;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.hero-content h1 { 
-    font-size: clamp(30px, 4vw, 60px);
+.hero-content h1 {
+    font-size: clamp(40px, 6vw, 70px);
     color: white;
-    margin-bottom: 15px;
-    margin-top: -80px;
-    margin-left: -30px;
+    margin: 0;
     font-family: 'Moliga';
 }
 
 .hero-content p {
-    
-    /* Caixa */
-    width: 774px;
-    height: 59px;
-    
-    
-    /* Letras */
+    max-width: 680px;
     color: #FFF;
     font-family: "Moliga";
-    font-size: 22px;
+    font-size: clamp(18px, 2vw, 24px);
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    margin-left: -30px;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .hero-content p strong{
@@ -157,36 +164,32 @@
 /* Imagem do lado */
 
 .hero-image {
-    margin-top: -70px;
-    margin-left: 40px;
     flex: 1;
+    min-width: 280px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 1000px;
+    max-width: 520px;
     border-radius: 12px;
     object-fit: cover;
 }
 
 .btn-saiba-mais {
-    
-    /* Botão */
     background-color: black;
     border-radius: 20px;
     border: none;
-    width: 302px;
-    height: 50px;
-    margin-left: -30px;
-    
-    
-    /* Letras */
+    width: auto;
+    max-width: 280px;
+    height: auto;
+    padding: 16px 32px;
     color: #eace47;
     font-weight: 400;
     cursor: pointer;
-    font-size: 36px;
+    font-size: clamp(18px, 2vw, 32px);
     font-family: 'Moliga';
 }
 
@@ -204,18 +207,19 @@
     color: white;
     padding: 100px 10%;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .about-text {
     flex: 1;
-    margin-left: -100px;
+    margin: 0;
 }
 
 /* Titulo seção sobre */
@@ -247,18 +251,6 @@
     max-width: 300px;
     position: relative;
     z-index: 2;
-}
-
-.circle-bg {
-    width: 400px;
-    height: 400px;
-    background-color: blue;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 /* Estilo das Seções */
@@ -345,33 +337,30 @@
 }
 
 .subtitle{
-    width: 1132px;
+    max-width: 920px;
     color: #211C1F;
     text-align: center;
     font-family: "Simple";
-    font-size: 30px;
+    font-size: clamp(18px, 2vw, 30px);
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.6;
+    margin: 0 auto;
 }
 
 /* Filtros */
 .btn-filter {
-    
-    /* layout */
-    width: 200px;
-    height: 60px;
     border-radius: 30px;
     background: #211C1F;
-
-    /* Letras */
+    padding: 12px 24px;
     color: #FFF;
     text-align: center;
     font-family: "Moliga";
-    font-size: 30px;
+    font-size: clamp(16px, 2vw, 28px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    white-space: nowrap;
 }
 
 .btn-filter.active {
